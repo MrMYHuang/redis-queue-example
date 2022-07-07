@@ -1,0 +1,15 @@
+version: '2'
+
+networks:
+  app:
+    driver: bridge
+    name: app
+
+services:
+  redis-g2-1:
+    image: redis
+    ports:
+      - 6379
+    networks:
+      - app
+    restart: always
